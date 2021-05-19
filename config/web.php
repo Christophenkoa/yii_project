@@ -7,7 +7,12 @@ $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    /* change name app */
     'name' => 'tutorial',
+    /* change app language. Default is en */
+    'language' => 'en',
+    /* change default route. Default is site/index */
+    'defaultRoute' => 'site/index',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
