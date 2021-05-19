@@ -13,6 +13,8 @@ $config = [
     'language' => 'en',
     /* change default route. Default is site/index */
     'defaultRoute' => 'site/index',
+    /* We define the layout. By default is main */
+    'layout' => 'main',
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
