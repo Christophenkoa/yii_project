@@ -59,8 +59,12 @@ $config = [
             ],
         ],
 
-        'assetManager' => [
+        /* 'assetManager' => [
             'appendTimestamp' = true
+        ], */
+
+        'assetManager' => [
+            'class' => 'app\components\AssetManager'
         ],
         
     ],
