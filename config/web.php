@@ -66,6 +66,10 @@ $config = [
         'assetManager' => [
             'class' => 'app\components\AssetManager'
         ],
+
+        'test' => [
+            'class' => 'app\components\TestComponent'
+        ],
         
     ],
     'params' => $params,

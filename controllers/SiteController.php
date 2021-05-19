@@ -61,6 +61,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        /* echo '<pre><br><br>';
+            var_dump(yii::$app->assetManager);
+        echo '</pre>'; */
+
+        yii::$app->test->hello();
         return $this->render('index');
     }
 
