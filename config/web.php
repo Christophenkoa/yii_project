@@ -61,6 +61,11 @@ $config = [
         
     ],
     'params' => $params,
+    'on beforeRequest' => function() {
+        echo '<pre><br><br>';
+            var_dump('from before request');
+        echo '</pre>';
+    }
 ];
 
 if (YII_ENV_DEV) {
