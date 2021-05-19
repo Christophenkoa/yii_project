@@ -58,9 +58,14 @@ $config = [
             'rules' => [
             ],
         ],
+
+        'assetManager' => [
+            'appendTimestamp' = true
+        ],
         
     ],
     'params' => $params,
+
     'on beforeRequest' => function() {
         echo '<pre><br><br>';
             var_dump('from before request');
