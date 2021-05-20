@@ -72,9 +72,11 @@ class SiteController extends Controller
     // before action 
     public function beforeAction($action) {
 
-        echo '<pre><br><br>';
-            var_dump('Controller before action');
+        if($action->id === 'index'){
+            echo '<pre><br><br>';
+            var_dump('Index controller');
         echo '</pre>';
+        }
         
         return parent::beforeAction($action);
     } 
