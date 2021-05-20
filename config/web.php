@@ -78,6 +78,12 @@ $config = [
         echo '<pre><br><br>';
             var_dump('from before request');
         echo '</pre>';
+    }, 
+
+    'on beforeAction' => function() {
+        echo '<pre><br><br>';
+            var_dump('Application before action');
+        echo '</pre>';
     }
 ];
 

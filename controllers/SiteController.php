@@ -69,6 +69,16 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    // before action 
+    public function beforeAction($action) {
+
+        echo '<pre><br><br>';
+            var_dump('Controller before action');
+        echo '</pre>';
+        
+        return parent::beforeAction($action);
+    } 
+
     /**
      * Login action.
      *
