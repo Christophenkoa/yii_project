@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\TestModel;
 
 class SiteController extends Controller
 {
@@ -65,21 +66,21 @@ class SiteController extends Controller
             var_dump(yii::$app->assetManager);
         echo '</pre>'; */
 
-        yii::$app->test->hello();
+        // yii::$app->test->hello();
         return $this->render('index');
     }
 
     // before action 
-    public function beforeAction($action) {
+    /* public function beforeAction($action) {
 
         if($action->id === 'index'){
             echo '<pre><br><br>';
             var_dump('Index controller');
         echo '</pre>';
         }
-        
+
         return parent::beforeAction($action);
-    } 
+    } */
 
     /**
      * Login action.
@@ -141,5 +142,19 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionTest() {
+        $test = new TestModel();
+        $test->name = 'John';
+        $test['surname'] = 'Doe';
+
+        /* echo '<pre>';
+            var_dump($test->attributes());
+        echo '</pre>'; */
+
+        echo '<pre>';
+            var_dump($test->getAttributeLabel('name'));
+        echo '</pre>';
     }
 }

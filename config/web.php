@@ -74,17 +74,17 @@ $config = [
     ],
     'params' => $params,
 
-    'on beforeRequest' => function() {
+    /* 'on beforeRequest' => function() {
         echo '<pre><br><br>';
             var_dump('from before request');
         echo '</pre>';
-    }, 
+    }, */
 
-    'on beforeAction' => function() {
+    /* 'on beforeAction' => function() {
         echo '<pre><br><br>';
             var_dump('Application before action');
         echo '</pre>';
-    }
+    } */
 ];
 
 if (YII_ENV_DEV) {
