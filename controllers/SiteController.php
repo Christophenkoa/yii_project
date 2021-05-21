@@ -193,4 +193,10 @@ class SiteController extends Controller
         echo yii::$app->request->get('id', 50). '<br>';
         echo yii::$app->request->hostInfo;
     }
+
+    public function actionResponse() {
+        // return 'Hello world';
+        // return $this->redirect('about');
+        yii::$app->response->content = 'Hello from response yii app';
+    }
 }
