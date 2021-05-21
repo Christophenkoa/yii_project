@@ -71,16 +71,18 @@ class SiteController extends Controller
     }
 
     // before action 
-    /* public function beforeAction($action) {
+    public function beforeAction($action) {
 
-        if($action->id === 'index'){
+        /*if($action->id === 'index'){
             echo '<pre><br><br>';
             var_dump('Index controller');
         echo '</pre>';
-        }
+        }*/
+
+        $this->layout = 'base';
 
         return parent::beforeAction($action);
-    } */
+    }
 
     /**
      * Login action.
@@ -89,6 +91,8 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'login';
+
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
