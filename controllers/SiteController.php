@@ -147,7 +147,7 @@ class SiteController extends Controller
     public function actionTest() {
         $test = new TestModel();
         // $test->name = 'John';
-        $test['surname'] = 'Doe';
+        // $test['surname'] = 'Doe';
 
         /* echo '<pre>';
             var_dump($test->attributes());
@@ -187,5 +187,10 @@ class SiteController extends Controller
             echo '</pre>';
         }
 
+    }
+
+    public function actionRequest() {
+        echo yii::$app->request->get('id', 50). '<br>';
+        echo yii::$app->request->hostInfo;
     }
 }

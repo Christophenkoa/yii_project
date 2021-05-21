@@ -19,7 +19,8 @@ class TestModel extends Model {
     public function rules() {
         return [
             // ['name', 'required'],
-            ['name', 'required', 'message' => 'Please enter your name']
+            ['name', 'required', 'message' => 'Please enter your name'],
+            ['surname', 'required', 'message' => 'Please enter your surname']
         ];
     }
 }
