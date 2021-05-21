@@ -8,4 +8,18 @@ class TestModel extends Model {
     public $name;
     public $surname;
     public $email;
+
+    public function attributeLabels() {
+
+        return [
+            'name' => 'My Name'
+        ];
+    }
+
+    public function rules() {
+        return [
+            // ['name', 'required'],
+            ['name', 'required', 'message' => 'Please enter your name']
+        ];
+    }
 }

@@ -146,7 +146,7 @@ class SiteController extends Controller
 
     public function actionTest() {
         $test = new TestModel();
-        $test->name = 'John';
+        // $test->name = 'John';
         $test['surname'] = 'Doe';
 
         /* echo '<pre>';
@@ -156,5 +156,36 @@ class SiteController extends Controller
         echo '<pre>';
             var_dump($test->getAttributeLabel('name'));
         echo '</pre>';
+
+        foreach($test as $attr =>  $value) {
+            echo $test->getAttributeLabel($attr) . '=' . $value . '<br>';
+        }
+
+        if($test->validate()) {
+            echo 'OK';
+
+        }else {
+            echo '<pre>';
+            var_dump($test->errors);
+            echo '</pre>';
+        }
+
+        $post = [
+            'name' => 'Nkoa',
+            'surname' => 'Christophe',
+            'email' => 'nkoachristophe@gmail.com'
+        ];
+
+        $test->attributes = $post;
+
+        if($test->validate()) {
+            echo '<br><br>OK';
+
+        }else {
+            echo '<pre><br><br>';
+            var_dump($test->errors);
+            echo '</pre>';
+        }
+
     }
 }
